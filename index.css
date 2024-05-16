@@ -1,0 +1,671 @@
+
+*{
+
+margin: 0;
+padding: 0;
+
+
+}
+
+body {
+  overflow-x: hidden; /* This will hide the horizontal scrollbar */
+}
+
+@font-face {
+
+    font-family: 'cairo';
+    src: url('./Cairo\,Montserrat/Cairo') format('truetype'); 
+}
+
+
+nav {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(54, 57, 49) ;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    font-family: "Cairo", sans-serif;
+    position: fixed; /* Make sure nav is positioned relative for absolute positioning of child elements */
+    z-index: 3;
+  }
+  
+  nav h1 {
+    font-size: 20px;
+    position: absolute;
+    top: 9px;
+    left: 5%;
+    color: aliceblue;
+  }
+  
+  #pands {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+  
+  nav ul {
+    font-size: 1.5rem;
+    list-style-type: none;
+    display: flex;
+    gap: 5rem; 
+   
+  }
+  
+  nav ul a {
+    color: aliceblue;
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+  
+  nav ul a:hover {
+    color: blue;
+    transition: .5s ease-in-out;
+  }
+  
+  nav span {
+    position: absolute;
+    top: 12px;
+    right: 50px;
+    cursor: pointer;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+  
+    nav h1 {
+      position: static;
+      margin-top: 10px;
+    }
+
+
+    #pands{
+
+display: none;
+
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    nav ul a {
+      font-size: 1rem;
+    }
+  
+    nav span {
+      position: static;
+      margin-top: 10px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Displayed on smaller screens */
+    }
+
+    .nav-list {
+        display: none; /* Initially hidden on smaller screens */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #ffffff;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .nav-list.active {
+        display: flex; /* Displayed when active (menu icon clicked) */
+        flex-direction: column;
+    }
+
+    .nav-list.active li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+
+.pic1 {
+
+width: 100%;
+height: 100vh;
+
+position: relative;
+
+max-width: 100%;
+height: 100%;
+overflow: hidden;
+
+
+
+}
+
+.first {
+
+  width: 100%;
+  height: 100vh;
+background-color: beige;
+  
+}
+
+#okzz {
+
+position: absolute;
+top: 30%;
+left: 60%;
+z-index: 1;
+
+
+filter: drop-shadow(10px 10px 15px rgb(255, 255, 255));
+ 
+max-width: 100%;
+
+  height: 70%;
+  transition: transform 5s ease-in-out;
+  transition: 1s ease-in-out;
+animation: moveRightLeft 3s ;
+}
+
+
+#okzz:hover{
+
+
+    transform: rotate(360deg); /* Rotate the image 360 degrees when hovered over */
+
+}
+
+
+
+
+
+
+
+
+
+
+.Text1 {
+  max-width: 80%; /* Limit the width of the text to prevent overflow */
+}
+
+@media (max-width: 768px) {
+ .Text1 h2 {
+      font-size: 1rem; 
+      display: inline;
+     color: #ffffff;
+  }
+
+ .Text1 p {
+     display: none;
+  }
+
+
+
+#okzz {
+
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: 40%;
+  z-index: 0;
+
+}
+
+}
+
+
+
+
+
+.Text1 {
+position: absolute;
+top: 40%;
+left: 20%;
+
+
+
+ color: rgb(0, 0, 0);
+
+ font-family: "Cairo", sans-serif;
+
+
+
+
+}
+
+
+.Text1 h2 {
+
+
+color: rgb(0, 0, 0);
+font-size: 80px;
+letter-spacing: 8px;
+}
+
+.Text1 p{
+
+font-size: 30px;
+
+
+}
+
+
+.Text1 button {
+
+border: 2px solid black;
+padding: 15px 10px;
+margin-top: 19px;
+background-color: rgb(106, 71, 221);
+color: rgb(255, 255, 255);
+
+}
+
+
+
+.second {
+
+
+background-color: rgb(37, 114, 183);
+width: 100%;
+height: 100vh;
+
+
+}
+
+
+
+.inside {
+
+width: 40%;
+height: 100%;
+position: relative;
+bottom: 100%;
+left: 0;
+background-color: rgba(0, 0, 0, 0.5);
+margin-top: -4px;
+
+}
+
+
+.Text {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    
+    
+    
+     color: rgb(255, 255, 255);
+    
+     font-family: "Cairo", sans-serif;
+    
+    
+    
+    
+    }
+    
+    
+    .Text h1{
+    
+    
+    color: aliceblue;
+    font-size: 60px;
+    letter-spacing: 6px;
+    }
+    
+    .Text span{
+    
+    font-size: 20px;
+    
+    
+    }
+
+    @media screen and (max-width: 768px) {
+      .inside {
+          width: 90%; /* Adjust width for smaller screens */
+      }
+      .Text h1 {
+          font-size: 6vw; /* Adjust font size for smaller screens */
+          letter-spacing: 1vw; /* Adjust letter spacing for smaller screens */
+      }
+      .Text span {
+          font-size: 3vw; /* Adjust font size for smaller screens */
+      }
+  }
+        
+
+
+
+.third {
+
+background-color: beige;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+}
+
+#lemin {
+
+ 
+   
+
+
+width: 300px;
+height: 300px;
+position: relative;
+left: 75%;
+top: 20%;
+transition: 2s ease-in-out;
+animation: moveRightLeft 4s linear infinite;
+
+filter: drop-shadow(10px 10px 15px rgb(255, 255, 255));
+}
+
+
+
+
+
+@keyframes moveRightLeft {
+  0%, 100% { transform: translateX(0); } /* Start and end position (no movement) */
+  50% { transform: translateX(20%); } /* Move 20% to the right */
+}
+
+
+
+.text99 {
+
+color: #000000;
+width: 50%;
+height: 100%;
+font-family: "Cairo", sans-serif;
+letter-spacing: 1px;
+}
+
+.third h2{
+ position: relative;
+bottom: 20%;
+left: 20%;
+
+
+font-size: 60px;
+border: 2px solid rgb(0, 0, 0);
+display:inline;
+padding: 10px 30px;
+
+}
+
+
+
+
+.third p{
+
+font-size: 17px;
+position: relative;
+bottom: 10%;
+left: 20%;
+
+
+}
+
+
+.third a{
+
+  font-size: 20px;
+  position: relative;
+  color: rgb(103, 103, 208);
+  left: 20%;
+bottom: 5%;
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .third h2 {
+      font-size: 6vw; /* Adjust font size for smaller screens */
+  }
+  .third p {
+      font-size: 2vw; /* Adjust font size for smaller screens */
+  }
+  .third a {
+      font-size: 3vw; /* Adjust font size for smaller screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+footer {
+  
+
+
+
+
+  background-color:rgb(54, 57, 49);
+    width: 100%;
+
+padding-bottom: 100px;
+
+  height: 45vh;
+
+  color: #fff;
+  
+  font-family: "Cairo", sans-serif;
+letter-spacing: 1px;
+
+
+
+  
+  }
+  
+  
+  
+  .zarads {
+    position: relative;
+    left: 10%;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 20px;
+  
+  
+  }
+  
+  .zarads img {
+  margin-top: 50px;
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+  
+    }
+    
+    .zarads h2{
+  padding-top: 40px;
+  color: #fff;
+  
+    }
+  .zarads p{
+  
+  color: aliceblue;
+  
+  }
+  .zarads .icon {
+  
+  size: 30px;
+    color: #000000;
+  }
+  
+  
+  .footerli {
+    width: 50%;
+  
+  position: relative;
+  left: 45%;
+  bottom: 35%;
+  
+  color: #fff;
+  
+  
+    padding: 0;
+    margin: 0;
+    display: flex;
+    
+  
+  
+  }
+  
+  .footerli li {
+  
+    list-style-type: none;
+  
+  
+  
+  
+    list-style: none;
+    justify-content: space-between;
+  margin-right: 120px;
+  
+  }
+
+
+  
+
+  
+  
+  .cont{
+  
+    display: inline-block;
+   
+    margin-left: 40px;
+
+
+    position: relative;
+    left: -20%;
+    top: 30%;
+
+    
+  background-color: #ffffff;
+  width: 200px ;
+  height: 200px;
+  
+  border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+
+text-align: center;
+
+transition: transform 0.8s ;
+  }
+
+  .cont:hover{
+
+
+transform: scale(1.1);
+
+  }
+
+  .cont img{
+
+padding: 30px;
+overflow: hidden;
+
+  }
+
+  @media screen and (max-width: 600px) {
+    .cont {
+        width: 80%; /* Adjust width for smaller screens */
+        margin-left: auto; /* Center the container horizontally */
+        margin-right: auto;
+        left: auto; /* Reset left position */
+        top: 0; /* Adjust as needed */
+      
+    }
+}
+
+
+
+  .pop {
+
+width: 100px;
+height: 100px;
+padding: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    footer {
+        height: 100%; /* Change height to auto on smaller screens */
+    }
+    
+    .zarads {
+        width: 80%; /* Adjust width for smaller screens */
+        max-width: none; /* Remove max-width */
+        left: 0; /* Reset left position */
+        margin: 0 auto 20px; /* Center horizontally */
+    }
+    
+    .zarads img {
+        width: 20%; /* Make the image fill its container */
+        height: 20%; /* Preserve aspect ratio */
+    }
+    
+    .zarads h2 {
+        padding-top: 10px; /* Adjust padding */
+    }
+    
+    .footerli {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+    
+    .footerli li {
+        margin-right: 0; /* Remove margin between list items */
+        margin-bottom: 10px; /* Add margin at the bottom of each item */
+    }
+}
+

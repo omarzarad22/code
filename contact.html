@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+
+<link rel="stylesheet" href="./index.css">
+<link rel="stylesheet" href="./gfju.css">
+<style>
+
+
+
+
+
+
+.popup-container {
+  display: none;
+  position:fixed;
+  top: 0;
+  left: 0;
+z-index: 1;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+
+
+}
+
+
+
+
+.wrapper{
+ 
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  z-index: 1;
+  background-color: #ffffff;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  
+  .wrapper .formbox {
+  width: 100%;
+  padding: 40px;
+  
+  
+  }
+ 
+.wrapper .icosniger {
+
+  position: absolute;
+  top: 0;
+    right: 0;
+  width: 45px;
+  height: 45px;
+  background: #cc1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  .formbox h2{
+  font-size: 2em;
+  color: #000000;
+  text-align: center;
+  
+  
+  }
+  
+  
+  .inputbox {
+  
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  margin: 30px 0;
+  }
+  
+  
+  
+  .inputbox label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: blue;
+  pointer-events: none;
+  transition: 0.5s;
+  
+  }
+  
+  
+  .inputbox input:focus~label
+  .inputbox input:valid~label{
+  
+  top: -5px;
+  
+  }
+  
+  
+  .inputbox input {
+  
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  
+  font-size: 1em;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  padding: 0 35px 0 5px;
+  }
+  
+  .inputbox .icon{
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em ;
+  color: #000000;
+  line-height: 57px ;
+  
+  
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #8e5050;
+  }
+  
+  
+  .btn {
+  width: 100%;
+  height: 45px;
+  background: #000000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: #0e0000;
+  font-weight: 500;
+  
+  
+  }
+  
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+</head>
+<body>
+    
+
+      
+      
+
+        <nav>
+
+            <h1>Pandas..</h1>
+            <img src="./img/cropped_image.png" id="pands">
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            
+            
+            <ul class="nav-list">
+            
+                <li><a href="./index.html">Home</a></li>
+            <li><a href="./page2.html">Products</a></li>
+            <li><a href="contact.html">About</a></li>
+            <span><i class="fa-solid fa-bars"></i></span>
+            
+            </ul>
+            <script src="https://kit.fontawesome.com/c627cba472.js" crossorigin="anonymous"></script>
+            </nav>
+            <script src="./script.js"></script>
+            
+        </nav> 
+          </div>
+
+
+
+
+
+<div class="main">
+
+
+<h2>Contact Us</h2>
+
+<p>    "Feel free to reach out to us with any inquiries or feedback through our contact form."<br>
+    "Need assistance or have questions? Contact us today; we're here to help!"<br>
+    "Get in touch with our team by phone, email, or through our social media channels<br> for any assistance you may require."</p>
+
+<button class="m">Via Phone</button>
+<button class="m">Via Email</button>
+
+<img src="./img/istockphoto-587799996-612x612.png" id="bob">
+
+
+    <form action="#" method="POST">
+       
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+       <br>
+       <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <br>
+            <button type="submit" class="iko">Submit</button>
+       
+    </form>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

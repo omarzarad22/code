@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandas</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Sundanese:wght@400..700&display=swap" rel="stylesheet">
+
+<link rel="icon" href="./img/cropped_image.png" type="img">
+
+<link rel="stylesheet" href="index.css">
+
+<script src="https://kit.fontawesome.com/c627cba472.js" crossorigin="anonymous"></script>
+
+<style>
+
+.container-fluid{
+
+display: inline;
+
+
+}
+
+
+
+.popup-container {
+  display: none;
+  position:fixed;
+  top: 0;
+  left: 0;
+z-index: 1;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+
+
+}
+
+
+
+
+.wrapper{
+ 
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  z-index: 1;
+  background-color: #ffffff;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  
+  .wrapper .formbox {
+  width: 100%;
+  padding: 40px;
+  
+  
+  }
+ 
+.wrapper .icosniger {
+
+  position: absolute;
+  top: 0;
+    right: 0;
+  width: 45px;
+  height: 45px;
+  background: #cc1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  .formbox h2{
+  font-size: 2em;
+  color: #000000;
+  text-align: center;
+  
+  
+  }
+  
+  
+  .inputbox {
+  
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  margin: 30px 0;
+  }
+  
+  
+  
+  .inputbox label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: blue;
+  pointer-events: none;
+  transition: 0.5s;
+  
+  }
+  
+  
+  .inputbox input:focus~label
+  .inputbox input:valid~label{
+  
+  top: -5px;
+  
+  }
+  
+  
+  .inputbox input {
+  
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  
+  font-size: 1em;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  padding: 0 35px 0 5px;
+  }
+  
+  .inputbox .icon{
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em ;
+  color: #000000;
+  line-height: 57px ;
+  
+  
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #8e5050;
+  }
+  
+  
+  .btn {
+  width: 100%;
+  height: 45px;
+  background: #000000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: #0e0000;
+  font-weight: 500;
+  
+  
+  }
+  
+
+
+
+
+
+
+</style>
+
+
+
+
+</style>
+
+
+</head>
+<body>
+    
+
+<nav>
+
+<h1>Pandas..</h1>
+<img src="./img/cropped_image.png" id="pands">
+
+<div class="menu-toggle" id="mobile-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</div>
+
+
+
+<ul class="nav-list">
+
+    <li><a href="./index.html">Home</a></li>
+<li><a href="./page2.html">Products</a></li>
+<li><a href="contact.html">About</a></li>
+<span><i class="fa-solid fa-bars"></i></span>
+
+</ul>
+<script src="https://kit.fontawesome.com/c627cba472.js" crossorigin="anonymous"></script>
+</nav>
+<script src="./script.js"></script>
+
+
+
+
+
+<div class="first">
+
+
+    
+
+<img src="./img/kol.png" id = "okzz">
+
+<div class="Text1">
+<h2>Mo Hossam</h2>
+<p>Buy Products , Sell , And Explore .</p>
+
+  
+
+
+
+  
+  <button onclick="togglePopup()" class="butnoyes" id="myButton">REGISTER</button>
+
+  <div class="popup-container" id="popup">
+    <div class="popup-content">
+      <span class="close" onclick="togglePopup()">&times;</span>
+     
+<div class="wrapper">
+  <span class="iconiger"><ion-icon name="close-outline"></ion-icon></span>
+  
+  
+  <div class="formbox">
+  <h2>Log In</h2>
+  <form action="#"><div class="inputbox">
+  <span class="icon"><ion-icon name="mail-outline"></ion-icon>
+  </span>
+  <input type="email" required>
+  <label>email</label>
+  
+  <div class="inputbox">
+  <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon>
+  </span>
+  <input type="password" required>
+  <label>password</label>
+  
+  
+  
+  </div>
+  
+  
+  </div>
+  
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="second">
+
+<img src="./img/U8jznD.jpg" class="pic1">
+
+<div class="inside">
+
+<div class="Text">
+
+    <h1>What we offer</h1>
+    
+
+    <br>
+    <br>
+    <span><i class="fa-solid fa-eye-slash" style="color: #ffffff;"></i>
+                   User authicantion Server Model +9 Years.</span>
+<br>
+<br>
+<span><i class="fa-solid fa-ghost" style="color: #ffffff;"></i> Over +100 users Experience</span>
+<br>
+<br>
+<span><i class="fa-solid fa-gears" style="color: #ffffff;"></i>No time wasted with the fast SE0</span>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="third">
+
+<img src="./img/nope.png" id="lemin">
+<div class="text99">
+<h2>About us</h2>
+<p>Hi we are madinent naser ba2et madinet nasr hahahh .In this example:
+
+  Replace "your-image.jpg" with the path to your image file.
+  The container class wraps the image and sets its dimensions. Adjust the width, height, and overflow properties as needed to fit your design.<br>
+  The animated-image class is applied to the image. It defines the animation properties,<br> including the animation duration (4s), timing function (linear), and iteration count (infinite). </p>
+<a href="./page2.html">Read More</a>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+<footer>
+
+
+
+
+
+
+
+    <div class="zarads">
+        <img src="./img/cropped_image.png" >
+      <h2>Zarad</h2>
+      <p>First Tech Comp TA-Production</p>
+      <span class="icon"><ion-icon name="logo-facebook"></ion-icon></span>
+      <span class="icon"><ion-icon name="logo-whatsapp"></ion-icon></span>
+      <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+      <span class="icon"><ion-icon name="logo-twitter"></ion-icon></span>
+      
+      
+      
+      
+      
+      
+      <script src="script.js"></script>
+      
+      </div>
+      
+      
+
+
+      <div class="footerli">
+    <ul>
+        <li><h2>Programs</h2></li>
+        <br>
+        <li>Trainee 1</li>
+        <li>Trainee 2</li>
+        </ul>
+      
+      <ul>
+      <li><h2>About</h2></li>
+      <br>
+      <li>Training</li>
+      <li>events</li>
+      <li>Activitied</li>
+      <li>etc</li>
+      </ul>
+      
+      <ul>
+      <li><h2>Contact</h2></li>
+      <br>
+      <li>+0109 340 2677</li>
+      <li>+966 68726 7896</li>
+      
+      
+      
+      
+      </ul>
+      
+      
+     
+
+</footer>
+
+
+
+
+</body>
+</html>
